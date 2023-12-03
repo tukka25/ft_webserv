@@ -1,0 +1,5 @@
+(Python) Web Server Gateway Interface (WSGI). 
+That’s why Gunicorn is a “WSGI” server. 
+The benefit of something like WSGI is that all the popular web frameworks (Django, Flask, Pyramid) 
+are WSGI compliant — that means any WSGI server 
+can use those frameworks to process requests with no problem.
