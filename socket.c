@@ -69,5 +69,5 @@ int main(int ac, char **av)
 		write (new_socket, send_to, strlen(send_to));
 	}
 		close(new_socket);
-	// printf("fd value = %d", server_fd);
+	printf("fd value = %d", server_fd);
 }
