@@ -1,2 +1,6 @@
 Sockets and servers for dummies:
     https://levelup.gitconnected.com/building-the-web-sockets-and-servers-for-dummies-886d1595a4f8
+webserver from scrath (C):
+    https://medium.com/from-the-scratch/http-server-what-do-you-need-to-know-to-build-a-simple-http-server-from-scratch-d1ef8945e4fa
+RFC documentaion (9112):
+    https://www.rfc-editor.org/rfc/rfc9112.html
