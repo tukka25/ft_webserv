@@ -1,0 +1,468 @@
+Active Internet connections
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)    
+tcp4       0      0  lab1r4s13.42abud.49675 lb-140-82-112-26.https ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49674 wf-in-f188.1e100.5228  ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49673 ldap.42abudhabi..ldaps ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49660 192.29.10.243.https    ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49658 a23-37-185-127.d.https ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49654 34.250.137.136.https   ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49646 server-3-160-69-.https ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49644 server-13-35-169.https ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49643 server-143-204-1.https ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49642 server-143-204-1.https ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49638 server-143-204-1.https ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49637 151.101.194.133.https  ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49636 fjr04s07-in-f1.1.https ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49635 172.217.19.195.https   ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49630 cdn-185-199-109-.https ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49584 34.160.37.96.https     ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49316 ec2-54-76-90-0.e.https ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49275 34.196.28.239.https    ESTABLISHED
+tcp6       0      0  fe80::aede:48ff:.49225 fe80::aede:48ff:.49315 ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49210 17.57.145.136.5223     ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49203 student-storage..iscsi ESTABLISHED
+tcp6       0      0  fe80::aede:48ff:.49200 fe80::aede:48ff:.49316 ESTABLISHED
+tcp6       0      0  fe80::aede:48ff:.49174 fe80::aede:48ff:.49324 ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49173 163.172.250.15.irdmi   ESTABLISHED
+tcp6       0      0  fe80::aede:48ff:.49161 fe80::aede:48ff:.49326 ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49159 deepthought-brok.amqp  ESTABLISHED
+tcp4       0      0  lab1r4s13.42abud.49158 deepthought-brok.amqp  ESTABLISHED
+tcp6       0      0  fe80::aede:48ff:.49153 fe80::aede:48ff:.49340 ESTABLISHED
+tcp6       0      0  fe80::aede:48ff:.49152 fe80::aede:48ff:.59602 ESTABLISHED
+icm4       0      0  *.*                    *.*                               
+Active Multipath Internet connections
+Proto/ID  Flags      Local Address          Foreign Address        (state)    
+icm6       0      0  *.*                    *.*                               
+Active LOCAL (UNIX) domain sockets
+Address          Type   Recv-Q Send-Q            Inode             Conn             Refs          Nextref Addr
+ 3a425a42736988b stream      0      0                0  3a425a4273690bb                0                0 /var/run/mDNSResponder
+ 3a425a4273690bb stream      0      0                0  3a425a42736988b                0                0
+ 3a425a42736ae6b stream      0      0                0  3a425a42736a8f3                0                0
+ 3a425a42736a8f3 stream      0      0                0  3a425a42736ae6b                0                0
+ 3a425a427369953 stream      0      0                0  3a425a42736ada3                0                0
+ 3a425a42736ada3 stream      0      0                0  3a425a427369953                0                0
+ 3a425a427368373 stream      0      0                0  3a425a427368503                0                0
+ 3a425a427368503 stream      0      0                0  3a425a427368373                0                0
+ 3a425a427369bab stream      0      0                0  3a425a42736a1eb                0                0
+ 3a425a42736a1eb stream      0      0                0  3a425a427369bab                0                0
+ 3a425a42a723e63 stream      0      0                0  3a425a42a72488b                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/docker.raw.sock
+ 3a425a42a72488b stream      0      0                0  3a425a42a723e63                0                0
+ 3a425a42a7244a3 stream      0      0                0  3a425a42a724bab                0                0 /Users/abdamoha/.docker/run/docker.sock
+ 3a425a42a724bab stream      0      0                0  3a425a42a7244a3                0                0
+ 3a425a42a724c73 stream      0      0                0  3a425a42a724953                0                0 /Users/abdamoha/.docker/run/docker.sock
+ 3a425a42a724953 stream      0      0                0  3a425a42a724c73                0                0
+ 3a425a4299e711b stream      0      0                0  3a425a4299e71e3                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/docker.raw.sock
+ 3a425a4299e71e3 stream      0      0                0  3a425a4299e711b                0                0
+ 3a425a4273688eb stream      0      0  3a425a4351aa41b                0                0                0 /var/folders/zz/zyxvpxvq6csfxvn_n000cdhc0033c3/T/vscode-git-9186c631dc.sock
+ 3a425a42736affb stream      0      0                0  3a425a42736811b                0                0 /var/run/mDNSResponder
+ 3a425a42736811b stream      0      0                0  3a425a42736affb                0                0
+ 3a425a42736ac13 stream      0      0  3a425a42abbc51b                0                0                0 /Users/abdamoha/Library/Application Support/Code/1.81-main.sock
+ 3a425a427368a7b stream      0      0                0  3a425a42736ab4b                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/docker.raw.sock
+ 3a425a42736ab4b stream      0      0                0  3a425a427368a7b                0                0
+ 3a425a42736a9bb stream      0      0                0  3a425a427368b43                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/docker.raw.sock
+ 3a425a427368b43 stream      0      0                0  3a425a42736a9bb                0                0
+ 3a425a42736aa83 stream      0      0                0  3a425a4273689b3                0                0 filesystem-volume.sock
+ 3a425a4273689b3 stream      0      0                0  3a425a42736aa83                0                0
+ 3a425a427368c0b stream      0      0                0  3a425a42a724313                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/docker.raw.sock
+ 3a425a42a724313 stream      0      0                0  3a425a427368c0b                0                0
+ 3a425a42a72424b stream      0      0                0  3a425a42a7247c3                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/docker.raw.sock
+ 3a425a42a7247c3 stream      0      0                0  3a425a42a72424b                0                0
+ 3a425a42a724e03 stream      0      0                0  3a425a42a724a1b                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/docker.raw.sock
+ 3a425a42a724a1b stream      0      0                0  3a425a42a724e03                0                0
+ 3a425a42a725763 stream      0      0                0  3a425a42a72550b                0                0 /Users/abdamoha/.docker/run/docker.sock
+ 3a425a42a72550b stream      0      0                0  3a425a42a725763                0                0
+ 3a425a42a72456b stream      0      0                0  3a425a42a7246fb                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/docker.raw.sock
+ 3a425a42a7246fb stream      0      0                0  3a425a42a72456b                0                0
+ 3a425a42a724183 stream      0      0                0  3a425a42a723b43                0                0 backend.sock
+ 3a425a42a723b43 stream      0      0                0  3a425a42a724183                0                0
+ 3a425a42a723823 stream      0      0  3a425a42a231b1b                0                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/lifecycle-server.sock
+ 3a425a42a7252b3 stream      0      0  3a425a42a23141b                0                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/docker.raw.sock
+ 3a425a42a7243db stream      0      0  3a425a42a11841b                0                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/filesystem-event.sock
+ 3a425a42a7238eb stream      0      0  3a425a42a11891b                0                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/http-proxy-control.sock
+ 3a425a42a72343b stream      0      0  3a425a42a11831b                0                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/volume-contents.sock
+ 3a425a42a723ff3 stream      0      0  3a425a42a11881b                0                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/filesystem-test.sock
+ 3a425a42a72582b stream      0      0                0  3a425a42a725443                0                0 vpnkit.data.sock
+ 3a425a42a725443 stream      0      0                0  3a425a42a72582b                0                0
+
+ 3a425a42a723d9b stream      0      0                0  3a425a42a723503                0                0
+ 3a425a42a7251eb stream      0      0                0  3a425a42a725a83                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/vms/0/00000002.00001003
+ 3a425a42a725a83 stream      0      0                0  3a425a42a7251eb                0                0
+ 3a425a42a725e6b stream      0      0  3a425a42a28001b                0                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/diagnosticd.sock
+ 3a425a42a7255d3 stream      0      0  3a425a42a29a81b                0                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/devenv-volumes.sock
+ 3a425a42a72537b stream      0      0  3a425a42a29a91b                0                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/debug-shell.sock
+ 3a425a42a723cd3 stream      0      0  3a425a42a27f21b                0                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/dns-forwarder.sock
+ 3a425a42a723a7b stream      0      0                0  3a425a42a724ecb                0                0 dns.internal.grpc.sock
+ 3a425a42a724ecb stream      0      0                0  3a425a42a723a7b                0                0
+ 3a425a42a725c13 stream      0      0                0  3a425a42a7258f3                0                0 dns.system.grpc.sock
+ 3a425a42a7258f3 stream      0      0                0  3a425a42a725c13                0                0
+ 3a425a42a725b4b stream      0      0                0  3a425a42a7232ab                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/memlogdq.sock
+ 3a425a42a7232ab stream      0      0                0  3a425a42a725b4b                0                0
+ 3a425a42a72375b stream      0      0                0  3a425a42a72569b                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/procd.sock
+ 3a425a42a72569b stream      0      0                0  3a425a42a72375b                0                0
+ 3a425a42a723c0b stream      0      0  3a425a42a1a861b                0                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/memlogdq.sock
+ 3a425a42a724f93 stream      0      0  3a425a42a0acc1b                0                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/procd.sock
+ 3a425a42a7239b3 stream      0      0                0  3a425a42a7231e3                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/vms/0/00000002.000007cf
+ 3a425a42a7231e3 stream      0      0                0  3a425a42a7239b3                0                0
+ 3a425a42a725f33 stream      0      0                0  3a425a42a723373                0                0 extension-manager.sock
+ 3a425a42a723373 stream      0      0                0  3a425a42a725f33                0                0
+ 3a425a42a725ffb stream      0      0                0  3a425a42a7259bb                0                0 extension-manager.sock
+ 3a425a42a7259bb stream      0      0                0  3a425a42a725ffb                0                0
+ 3a425a42a725da3 stream      0      0                0  3a425a42a725123                0                0 extension-manager.sock
+ 3a425a42a725123 stream      0      0                0  3a425a42a725da3                0                0
+ 3a425a42a7235cb stream      0      0                0  3a425a42a7240bb                0                0 extension-manager.sock
+ 3a425a42a7240bb stream      0      0                0  3a425a42a7235cb                0                0
+ 3a425a42a725cdb stream      0      0                0  3a425a42a72311b                0                0 extension-manager.sock
+ 3a425a42a72311b stream      0      0                0  3a425a42a725cdb                0                0
+ 3a425a427369a1b stream      0      0  3a425a429fd521b                0                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/vms/0/00000003.000005f5
+ 3a425a4273693db stream      0      0  3a425a429fd591b                0                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/vms/0/connect
+ 3a425a4273696fb stream      0      0                0  3a425a427369f93                0                0 vpnkit.eth.sock
+ 3a425a427369f93 stream      0      0                0  3a425a4273696fb                0                0
+ 3a425a42736a763 stream      0      0                0  3a425a427368cd3                0                0 /Users/abdamoha/.docker/run/docker.sock
+ 3a425a427368cd3 stream      0      0                0  3a425a42736a763                0                0
+ 3a425a42736a69b stream      0      0                0  3a425a42736a5d3                0                0 backend.sock
+ 3a425a42736a5d3 stream      0      0                0  3a425a42736a69b                0                0
+ 3a425a427368e63 stream      0      0                0  3a425a42736a37b                0                0 backend.sock
+ 3a425a42736a37b stream      0      0                0  3a425a427368e63                0                0
+ 3a425a42736a50b stream      0      0  3a425a42a11b41b                0                0                0 docker-api-proxy-control.sock
+ 3a425a427369ae3 stream      0      0                0  3a425a42736a2b3                0                0 filesystem-volume.sock
+ 3a425a42736a2b3 stream      0      0                0  3a425a427369ae3                0                0
+ 3a425a427368f2b stream      0      0                0  3a425a42736a82b                0                0 extension-manager.sock
+ 3a425a42736a82b stream      0      0                0  3a425a427368f2b                0                0
+ 3a425a427368ff3 stream      0      0                0  3a425a427369183                0                0 filesystem-volume.sock
+ 3a425a427369183 stream      0      0                0  3a425a427368ff3                0                0
+ 3a425a427369c73 stream      0      0  3a425a42a11bc1b                0                0                0 extension-manager.sock
+ 3a425a42736a123 stream      0      0  3a425a42ebeeb1b                0                0                0 vpnkit.http.sock
+ 3a425a42736924b stream      0      0                0  3a425a427369313                0                0 /Users/abdamoha/.docker/run/docker.sock
+ 3a425a427369313 stream      0      0                0  3a425a42736924b                0                0
+ 3a425a42736a05b stream      0      0  3a425a42a0a401b                0                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/docker-dev-env-api.sock
+ 3a425a427369e03 stream      0      0  3a425a42a210c1b                0                0                0 /Users/abdamoha/.docker/run/docker-cli-api.sock
+ 3a425a4273694a3 stream      0      0  3a425a42a01e01b                0                0                0 vpnkit.pcap.sock
+ 3a425a42736956b stream      0      0  3a425a42a03081b                0                0                0 vpnkit.diag.sock
+ 3a425a427369d3b stream      0      0  3a425a42a203b1b                0                0                0 vpnkit.eth.sock
+ 3a425a427369ecb stream      0      0  3a425a42a203d1b                0                0                0 /Users/abdamoha/.docker/run/docker.sock
+ 3a425a4299e9f33 stream      0      0                0  3a425a4299e9ffb                0                0 backend.sock
+ 3a425a4299e9ffb stream      0      0                0  3a425a4299e9f33                0                0
+ 3a425a42fceb1e3 stream      0      0                0  3a425a42fceb2ab                0                0 backend.sock
+ 3a425a42fceb2ab stream      0      0                0  3a425a42fceb1e3                0                0
+ 3a425a42fcedf33 stream      0      0                0  3a425a42fceb11b                0                0 backend.sock
+ 3a425a42fceb11b stream      0      0                0  3a425a42fcedf33                0                0
+ 3a425a42fcedffb stream      0      0                0  3a425a42fcede6b                0                0 backend.sock
+ 3a425a42fcede6b stream      0      0                0  3a425a42fcedffb                0                0
+ 3a425a42b1f2183 stream      0      0                0  3a425a42b1f3b4b                0                0 backend.sock
+ 3a425a42b1f3b4b stream      0      0                0  3a425a42b1f2183                0                0
+ 3a425a42b1f1ff3 stream      0      0                0  3a425a42b1f382b                0                0 backend.sock
+ 3a425a42b1f382b stream      0      0                0  3a425a42b1f1ff3                0                0
+ 3a425a42b1f35d3 stream      0      0                0  3a425a42b1f1b43                0                0 backend.sock
+ 3a425a42b1f1b43 stream      0      0                0  3a425a42b1f35d3                0                0
+ 3a425a4299e7503 stream      0      0                0  3a425a4299e9e6b                0                0 backend.sock
+ 3a425a4299e9e6b stream      0      0                0  3a425a4299e7503                0                0
+ 3a425a4299e9da3 stream      0      0                0  3a425a4299e9cdb                0                0 backend.sock
+ 3a425a4299e9cdb stream      0      0                0  3a425a4299e9da3                0                0
+ 3a425a4299e7693 stream      0      0                0  3a425a4299e775b                0                0 backend.sock
+ 3a425a4299e775b stream      0      0                0  3a425a4299e7693                0                0
+ 3a425a4299e9c13 stream      0      0                0  3a425a4299e9b4b                0                0 backend.sock
+ 3a425a4299e9b4b stream      0      0                0  3a425a4299e9c13                0                0
+ 3a425a4299e7823 stream      0      0                0  3a425a4299e9a83                0                0 backend.sock
+ 3a425a4299e9a83 stream      0      0                0  3a425a4299e7823                0                0
+ 3a425a4299e99bb stream      0      0                0  3a425a4299e78eb                0                0 backend.sock
+ 3a425a4299e78eb stream      0      0                0  3a425a4299e99bb                0                0
+ 3a425a4299e79b3 stream      0      0                0  3a425a4299e7a7b                0                0 backend.sock
+ 3a425a4299e7a7b stream      0      0                0  3a425a4299e79b3                0                0
+ 3a425a4299e98f3 stream      0      0  3a425a42a1c6a1b                0                0                0 /var/folders/zz/zyxvpxvq6csfxvn_n000cdhc0033c3/T/scoped_dirOyFbHi/SingletonSocket
+ 3a425a4299e9763 stream      0      0  3a425a42a15731b                0                0                0 hubproxy.sock
+ 3a425a4299e7c0b stream      0      0  3a425a42a157f1b                0                0                0 socks.sock
+ 3a425a4299e969b stream      0      0  3a425a42a157a1b                0                0                0 dns.internal.grpc.sock
+ 3a425a4299e7cd3 stream      0      0  3a425a42a164f1b                0                0                0 dns.system.grpc.sock
+
+ 3a425a4299e7e63 stream      0      0  3a425a42a14d41b                0                0                0 filesystem-export.sock
+ 3a425a4299e7f2b stream      0      0  3a425a42a14de1b                0                0                0 /Users/abdamoha/Library/Containers/com.docker.docker/Data/vms/0/00000002.00001003
+ 3a425a4299e8a1b stream      0      0  3a425a42a14e01b                0                0                0 filesystem-fd.sock
+ 3a425a4299e8d3b stream      0      0  3a425a42a14d21b                0                0                0 filesystem.sock
+ 3a425a4299e7ff3 stream      0      0  3a425a42a14d31b                0                0                0 filesystem-volume.sock
+ 3a425a4299e8183 stream      0      0  3a425a42a168e1b                0                0                0 docker-cli.sock
+ 3a425a4299e80bb stream      0      0  3a425a429faac1b                0                0                0 ./backend.native.sock
+ 3a425a4299e8633 stream      0      0                0  3a425a4299e92b3                0                0 /var/run/mDNSResponder
+ 3a425a4299e92b3 stream      0      0                0  3a425a4299e8633                0                0
+ 3a425a4299e8ae3 stream      0      0                0  3a425a4299e824b                0                0 /var/run/mDNSResponder
+ 3a425a4299e824b stream      0      0                0  3a425a4299e8ae3                0                0
+ 3a425a4299e8bab stream      0      0  3a425a42a21d41b                0                0                0 backend.sock
+ 3a425a4299e86fb stream      0      0  3a425a42a21d51b                0                0                0 networkproxy.sock
+ 3a425a4299e83db stream      0      0  3a425a42a21d21b                0                0                0 httpproxy-restricted.sock
+ 3a425a4299e8313 stream      0      0  3a425a42a21df1b                0                0                0 httpproxy.sock
+ 3a425a4299e95d3 stream      0      0  3a425a42a21011b                0                0                0 vpnkit.data.sock
+ 3a425a4299e937b stream      0      0  3a425a42a21e01b                0                0                0 vpnkit.port.sock
+ 3a425a4299e856b stream      0      0                0  3a425a4299e84a3                0                0 /var/run/mDNSResponder
+ 3a425a4299e84a3 stream      0      0                0  3a425a4299e856b                0                0
+ 3a425a4299e9123 stream      0      0                0  3a425a4299e8c73                0                0
+ 3a425a4299e8c73 stream      0      0                0  3a425a4299e9123                0                0
+ 3a425a4299e888b stream      0      0                0  3a425a4299e8953                0                0
+ 3a425a4299e8953 stream      0      0                0  3a425a4299e888b                0                0
+ 3a425a4299e91eb stream      0      0                0  3a425a4299e8f93                0                0
+ 3a425a4299e8f93 stream      0      0                0  3a425a4299e91eb                0                0
+ 3a425a4299e87c3 stream      0      0                0  3a425a4299e905b                0                0
+ 3a425a4299e905b stream      0      0                0  3a425a4299e87c3                0                0
+ 3a425a4299e8ecb stream      0      0                0  3a425a4299e8e03                0                0 /var/run/mDNSResponder
+ 3a425a4299e8e03 stream      0      0                0  3a425a4299e8ecb                0                0
+ 3a425a42b1f32b3 stream      0      0  3a425a42892241b                0                0                0 /var/folders/zz/zyxvpxvq6csfxvn_n000cdhc0033c3/T/vscode-git-05fdf12fe0.sock
+ 3a425a42fcedda3 stream      0      0                0  3a425a42fceb373                0                0 /var/run/mDNSResponder
+ 3a425a42fceb373 stream      0      0                0  3a425a42fcedda3                0                0
+ 3a425a42fceb5cb stream      0      0                0  3a425a42fceda83                0                0 /var/run/mDNSResponder
+ 3a425a42fceda83 stream      0      0                0  3a425a42fceb5cb                0                0
+ 3a425a42fcedc13 stream      0      0                0  3a425a42fceb503                0                0 /var/run/mDNSResponder
+ 3a425a42fceb503 stream      0      0                0  3a425a42fcedc13                0                0
+ 3a425a42fceba7b stream      0      0                0  3a425a42fcedb4b                0                0 /var/run/mDNSResponder
+ 3a425a42fcedb4b stream      0      0                0  3a425a42fceba7b                0                0
+ 3a425a42fceb693 stream      0      0                0  3a425a42fced50b                0                0 /Users/abdamoha/Library/Application Support/iTerm2/iterm2-daemon-1.socket
+ 3a425a42fced50b stream      0      0                0  3a425a42fceb693                0                0
+ 3a425a42fced9bb stream      0      0  3a425a431e12a1b                0                0                0 /Users/abdamoha/Library/Application Support/iTerm2/iterm2-daemon-1.socket
+ 3a425a42fceb75b stream      0      0                0  3a425a42fced8f3                0                0 /var/run/mDNSResponder
+ 3a425a42fced8f3 stream      0      0                0  3a425a42fceb75b                0                0
+ 3a425a42fced82b stream      0      0                0  3a425a42fced763                0                0 /var/run/mDNSResponder
+ 3a425a42fced763 stream      0      0                0  3a425a42fced82b                0                0
+ 3a425a42fceb823 stream      0      0                0  3a425a42fceb9b3                0                0 /var/run/mDNSResponder
+ 3a425a42fceb8eb stream      0      0                0  3a425a42fced69b                0                0 /var/run/mDNSResponder
+ 3a425a42fceb9b3 stream      0      0                0  3a425a42fceb823                0                0
+ 3a425a42fced69b stream      0      0                0  3a425a42fceb8eb                0                0
+ 3a425a42fced5d3 stream      0      0                0  3a425a42fced443                0                0 /var/run/mDNSResponder
+ 3a425a42fced443 stream      0      0                0  3a425a42fced5d3                0                0
+ 3a425a42fced37b stream      0      0                0  3a425a42fcebb43                0                0 /var/run/mDNSResponder
+ 3a425a42fcebb43 stream      0      0                0  3a425a42fced37b                0                0
+ 3a425a42fcebc0b stream      0      0                0  3a425a42fced2b3                0                0 /var/run/mDNSResponder
+ 3a425a42fced2b3 stream      0      0                0  3a425a42fcebc0b                0                0
+ 3a425a42fced1eb stream      0      0                0  3a425a42fcecf93                0                0 /var/run/mDNSResponder
+ 3a425a42fced123 stream      0      0                0  3a425a42fcebe63                0                0 /var/run/mDNSResponder
+ 3a425a42fcebe63 stream      0      0                0  3a425a42fced123                0                0
+ 3a425a42fcecf93 stream      0      0                0  3a425a42fced1eb                0                0
+ 3a425a42fcebd9b stream      0      0                0  3a425a42fcebcd3                0                0 /var/run/mDNSResponder
+ 3a425a42fcebcd3 stream      0      0                0  3a425a42fcebd9b                0                0
+ 3a425a42fced05b stream      0      0  3a425a42afabc1b                0                0                0 /Users/abdamoha/Library/Application Support/Code/1.80-main.sock
+ 3a425a42fcebff3 stream      0      0                0  3a425a42fcec183                0                0 /var/run/mDNSResponder
+ 3a425a42fcec183 stream      0      0                0  3a425a42fcebff3                0                0
+ 3a425a42fcec633 stream      0      0  3a425a43070541b                0                0                0 /var/folders/zz/zyxvpxvq6csfxvn_n000cdhc0033c3/T/.com.google.Chrome.nrV7bL/SingletonSocket
+ 3a425a42fcecbab stream      0      0                0  3a425a42fcec4a3                0                0 /var/run/mDNSResponder
+ 3a425a42fcec4a3 stream      0      0                0  3a425a42fcecbab                0                0
+ 3a425a42fcec56b stream      0      0                0  3a425a42fcecae3                0                0 /var/run/mDNSResponder
+ 3a425a42fcecae3 stream      0      0                0  3a425a42fcec56b                0                0
+ 3a425a42fcec7c3 stream      0      0                0  3a425a42fcec88b                0                0 /var/run/mDNSResponder
+ 3a425a42fcec88b stream      0      0                0  3a425a42fcec7c3                0                0
+ 3a425a426808373 stream      0      0                0  3a425a42680acdb                0                0 /var/run/mDNSResponder
+ 3a425a42680acdb stream      0      0                0  3a425a426808373                0                0
+ 3a425a42680a1eb stream      0      0                0  3a425a42680988b                0                0 /var/run/mDNSResponder
+ 3a425a42680988b stream      0      0                0  3a425a42680a1eb                0                0
+ 3a425a42b1f3ffb stream      0      0                0  3a425a42b1f3e6b                0                0 /var/run/mDNSResponder
+ 3a425a42b1f3f33 stream      0      0                0  3a425a42b1f3cdb                0                0 /var/run/mDNSResponder
+ 3a425a42b1f3e6b stream      0      0                0  3a425a42b1f3ffb                0                0
+ 3a425a42b1f3da3 stream      0      0                0  3a425a42b1f111b                0                0 /var/run/mDNSResponder
+ 3a425a42b1f3cdb stream      0      0                0  3a425a42b1f3f33                0                0
+ 3a425a42b1f111b stream      0      0                0  3a425a42b1f3da3                0                0
+ 3a425a42b1f337b stream      0      0                0  3a425a42b1f39bb                0                0 /var/run/mDNSResponder
+ 3a425a42b1f39bb stream      0      0                0  3a425a42b1f337b                0                0
+ 3a425a42b1f3763 stream      0      0                0  3a425a42b1f12ab                0                0 /var/run/mDNSResponder
+ 3a425a42b1f12ab stream      0      0                0  3a425a42b1f3763                0                0
+ 3a425a42b1f11e3 stream      0      0                0  3a425a42b1f3c13                0                0 /var/run/mDNSResponder
+ 3a425a42b1f3c13 stream      0      0                0  3a425a42b1f11e3                0                0
+ 3a425a42b1f1373 stream      0      0                0  3a425a42b1f3443                0                0 /var/run/usbmuxd
+ 3a425a42b1f3443 stream      0      0                0  3a425a42b1f1373                0                0
+ 3a425a42b1f1503 stream      0      0                0  3a425a42b1f143b                0                0 /var/run/usbmuxd
+ 3a425a42b1f143b stream      0      0                0  3a425a42b1f1503                0                0
+ 3a425a42b1f31eb stream      0      0                0  3a425a42b1f15cb                0                0 /var/run/mDNSResponder
+ 3a425a42b1f15cb stream      0      0                0  3a425a42b1f31eb                0                0
+ 3a425a42b1f3123 stream      0      0                0  3a425a42b1f305b                0                0
+ 3a425a42b1f305b stream      0      0                0  3a425a42b1f3123                0                0
+ 3a425a42b1f1693 stream      0      0                0  3a425a42b1f175b                0                0
+ 3a425a42b1f175b stream      0      0                0  3a425a42b1f1693                0                0
+ 3a425a42b1f2f93 stream      0      0                0  3a425a42b1f1823                0                0
+ 3a425a42b1f1823 stream      0      0                0  3a425a42b1f2f93                0                0
+ 3a425a42b1f24a3 stream      0      0                0  3a425a42b1f224b                0                0
+ 3a425a42b1f224b stream      0      0                0  3a425a42b1f24a3                0                0
+ 3a425a42b1f23db stream      0      0                0  3a425a42b1f1f2b                0                0 /var/run/mDNSResponder
+ 3a425a42b1f1f2b stream      0      0                0  3a425a42b1f23db                0                0
+ 3a425a42b1f1a7b stream      0      0                0  3a425a42b1f19b3                0                0 /var/run/mDNSResponder
+ 3a425a42b1f19b3 stream      0      0                0  3a425a42b1f1a7b                0                0
+ 3a425a42b1f1c0b stream      0      0  3a425a42eb9b31b                0                0                0 /var/tmp/filesystemui.socket
+ 3a425a42b1f27c3 stream      0      0  3a425a42eb9bf1b                0                0                0 /private/tmp/com.apple.launchd.oEMLLjADqq/Listeners
+ 3a425a42b1f2ae3 stream      0      0                0                0                0                0 /var/run/iscsid
+ 3a425a42b1f2c73 stream      0      0  3a425a426b0f21b                0                0                0 /var/run/iscsid
+ 3a425a42b1f1cd3 stream      0      0                0  3a425a42b1f26fb                0                0 /var/run/mDNSResponder
+ 3a425a42b1f26fb stream      0      0                0  3a425a42b1f1cd3                0                0
+ 3a425a4268081e3 stream      0      0                0  3a425a42680ae6b                0                0 /var/run/mDNSResponder
+ 3a425a42680ae6b stream      0      0                0  3a425a4268081e3                0                0
+ 3a425a42680843b stream      0      0                0  3a425a42680ada3                0                0 /var/run/mDNSResponder
+ 3a425a42680ada3 stream      0      0                0  3a425a42680843b                0                0
+ 3a425a42680ab4b stream      0      0                0  3a425a42680aa83                0                0 /var/run/mDNSResponder
+ 3a425a42680aa83 stream      0      0                0  3a425a42680ab4b                0                0
+ 3a425a42680a9bb stream      0      0                0  3a425a4268088eb                0                0 /var/run/mDNSResponder
+ 3a425a4268088eb stream      0      0                0  3a425a42680a9bb                0                0
+ 3a425a42680a5d3 stream      0      0                0  3a425a42680a69b                0                0 /var/run/mDNSResponder
+ 3a425a42680a69b stream      0      0                0  3a425a42680a5d3                0                0
+ 3a425a426808d9b stream      0      0                0  3a425a42680a8f3                0                0 /var/run/mDNSResponder
+ 3a425a42680a8f3 stream      0      0                0  3a425a426808d9b                0                0
+ 3a425a42680a82b stream      0      0                0  3a425a426808823                0                0 /var/run/mDNSResponder
+ 3a425a426808823 stream      0      0                0  3a425a42680a82b                0                0
+ 3a425a42680a50b stream      0      0                0  3a425a42680a05b                0                0
+ 3a425a42680a05b stream      0      0                0  3a425a42680a50b                0                0
+ 3a425a42680a443 stream      0      0                0  3a425a42680a37b                0                0 /var/run/mDNSResponder
+ 3a425a42680a37b stream      0      0                0  3a425a42680a443                0                0
+ 3a425a426808cd3 stream      0      0  3a425a427dab51b                0                0                0 /var/run/pppconfd
+ 3a425a42680a2b3 stream      0      0  3a425a4278a7b1b                0                0                0 /var/run/displaypolicyd/state
+ 3a425a4268090bb stream      0      0  3a425a426b60d1b                0                0                0 /var/run/appusaged
+ 3a425a426809183 stream      0      0  3a425a426b6031b                0                0                0 /var/run/authrestartd
+ 3a425a42680924b stream      0      0  3a425a426b34d1b                0                0                0 /var/run/usbmuxd
+ 3a425a426809313 stream      0      0  3a425a426b2321b                0                0                0 /var/rpc/ncalrpc/srvsvc
+ 3a425a426809f93 stream      0      0  3a425a426b23b1b                0                0                0 /var/rpc/ncacn_np/srvsvc
+ 3a425a4268093db stream      0      0  3a425a426b2331b                0                0                0 /var/rpc/ncalrpc/wkssvc
+ 3a425a4268094a3 stream      0      0  3a425a426b2341b                0                0                0 /var/rpc/ncacn_np/wkssvc
+ 3a425a42680956b stream      0      0  3a425a426b2351b                0                0                0 /var/rpc/ncacn_np/mdssvc
+ 3a425a426809ecb stream      0      0  3a425a426b23a1b                0                0                0 /var/rpc/ncalrpc/lsarpc
+ 3a425a426809e03 stream      0      0  3a425a426b2361b                0                0                0 /var/rpc/ncacn_np/lsarpc
+ 3a425a426809d3b stream      0      0  3a425a426b2391b                0                0                0 /var/run/mDNSResponder
+ 3a425a426809c73 stream      0      0  3a425a426b2381b                0                0                0 /var/run/systemkeychaincheck.socket
+ 3a425a426809633 stream      0      0  3a425a426b0f11b                0                0                0 /private/var/run/.sim_diagnosticd_socket
+ 3a425a4268096fb stream      0      0  3a425a426b1001b                0                0                0 /var/run/portmap.socket
+ 3a425a4268097c3 stream      0      0  3a425a426b0ff1b                0                0                0 /var/run/vpncontrol.sock
+ 3a425a426809953 stream      0      0  3a425a426b0fe1b                0                0                0 /var/rpc/ncalrpc/NETLOGON
+ 3a425a426809a1b stream      0      0  3a425a426b0f41b                0                0                0 /private/var/run/cupsd
+ 3a425a4299e7373 dgram       0      0                0  3a425a426809bab                0  3a425a42736843b
+ 3a425a42736843b dgram       0      0                0  3a425a426809bab                0  3a425a427368693
+ 3a425a427368693 dgram       0      0                0  3a425a426809bab                0  3a425a427368d9b
+ 3a425a427368d9b dgram       0      0                0  3a425a426809bab                0  3a425a4299e743b
+ 3a425a4299e743b dgram       0      0                0  3a425a426809bab                0  3a425a4299e950b
+ 3a425a4299e950b dgram       0      0                0  3a425a426809bab                0  3a425a4299e9443
+ 3a425a4299e9443 dgram       0      0                0  3a425a426809bab                0  3a425a42fcedcdb
+ 3a425a42fcedcdb dgram       0      0                0  3a425a426809bab                0  3a425a42fceb43b
+ 3a425a42fceb43b dgram       0      0                0  3a425a426809bab                0  3a425a42fcececb
+ 3a425a42fcececb dgram       0      0                0  3a425a426809bab                0  3a425a42fcece03
+ 3a425a42fcece03 dgram       0      0                0  3a425a426809bab                0  3a425a42fcec0bb
+ 3a425a42fcebf2b dgram       0      0                0  3a425a42fcecd3b  3a425a42fcecd3b                0
+ 3a425a42fcecd3b dgram       0      0                0  3a425a42fcebf2b  3a425a42fcebf2b                0
+ 3a425a42fcec0bb dgram       0      0                0  3a425a426809bab                0  3a425a42fcecc73
+ 3a425a42fcecc73 dgram       0      0                0  3a425a426809bab                0  3a425a42fcec24b
+ 3a425a42fcec24b dgram       0      0                0  3a425a426809bab                0  3a425a42fcec313
+ 3a425a42fcec313 dgram       0      0                0  3a425a426809bab                0  3a425a42fcec6fb
+ 3a425a42fcec6fb dgram       0      0                0  3a425a426809bab                0  3a425a42fcec3db
+ 3a425a42fcec3db dgram       0      0                0  3a425a426809bab                0  3a425a426808503
+ 3a425a42fceca1b dgram       0      0                0  3a425a42fcec953  3a425a42fcec953                0
+ 3a425a42fcec953 dgram       0      0                0  3a425a42fceca1b  3a425a42fceca1b                0
+ 3a425a426808503 dgram       0      0                0  3a425a426809bab                0  3a425a42680ac13
+ 3a425a42680ac13 dgram       0      0                0  3a425a426809bab                0  3a425a42b1f3a83
+ 3a425a42b1f3a83 dgram       0      0                0  3a425a426809bab                0  3a425a42b1f350b
+ 3a425a42b1f350b dgram       0      0                0  3a425a426809bab                0  3a425a42b1f18eb
+ 3a425a42b1f369b dgram       0      0                0  3a425a42b1f38f3  3a425a42b1f38f3                0
+ 3a425a42b1f38f3 dgram       0      0                0  3a425a42b1f369b  3a425a42b1f369b                0
+ 3a425a42b1f18eb dgram       0      0                0  3a425a426809bab                0  3a425a42b1f2ecb
+ 3a425a42b1f2ecb dgram       0      0                0  3a425a426809bab                0  3a425a42b1f2a1b
+ 3a425a42b1f2a1b dgram       0      0                0  3a425a426809bab                0  3a425a42b1f2953
+ 3a425a42b1f2953 dgram       0      0                0  3a425a426809bab                0  3a425a42b1f2633
+ 3a425a42b1f2633 dgram       0      0                0  3a425a426809bab                0  3a425a42b1f2e03
+ 3a425a42b1f2e03 dgram       0      0                0  3a425a426809bab                0  3a425a42b1f1e63
+ 3a425a42b1f1d9b dgram       0      0                0  3a425a42b1f2d3b  3a425a42b1f2d3b                0
+ 3a425a42b1f2d3b dgram       0      0                0  3a425a42b1f1d9b  3a425a42b1f1d9b                0
+ 3a425a42b1f1e63 dgram       0      0                0  3a425a426809bab                0  3a425a42b1f2bab
+ 3a425a42b1f2bab dgram       0      0                0  3a425a426809bab                0  3a425a42b1f256b
+ 3a425a42b1f256b dgram       0      0                0  3a425a426809bab                0  3a425a42b1f288b
+ 3a425a42b1f288b dgram       0      0                0  3a425a426809bab                0  3a425a42b1f20bb
+ 3a425a42b1f20bb dgram       0      0                0  3a425a426809bab                0  3a425a42b1f2313
+ 3a425a42b1f2313 dgram       0      0                0  3a425a426809bab                0  3a425a4268085cb
+ 3a425a42680affb dgram       0      0                0  3a425a42680af33  3a425a42680af33                0
+ 3a425a42680af33 dgram       0      0                0  3a425a42680affb  3a425a42680affb                0
+ 3a425a4268082ab dgram       0      0                0  3a425a42680811b  3a425a42680811b                0
+ 3a425a42680811b dgram       0      0                0  3a425a4268082ab  3a425a4268082ab                0
+ 3a425a4268085cb dgram       0      0                0  3a425a426809bab                0  3a425a426808693
+ 3a425a426808693 dgram       0      0                0  3a425a426809bab                0  3a425a42680a123
+ 3a425a42680875b dgram       0      0                0  3a425a42680a763  3a425a42680a763                0
+ 3a425a42680a763 dgram       0      0                0  3a425a42680875b  3a425a42680875b                0
+ 3a425a4268089b3 dgram       0      0                0  3a425a426808a7b  3a425a426808a7b                0
+ 3a425a426808a7b dgram       0      0                0  3a425a4268089b3  3a425a4268089b3                0
+ 3a425a426808b43 dgram       0      0                0  3a425a426808c0b  3a425a426808c0b                0
+ 3a425a426808c0b dgram       0      0                0  3a425a426808b43  3a425a426808b43                0
+ 3a425a42680a123 dgram       0      0                0  3a425a426809bab                0  3a425a426808e63
+ 3a425a426808e63 dgram       0      0                0  3a425a426809bab                0  3a425a426809ae3
+ 3a425a426808f2b dgram       0      0                0  3a425a426808ff3  3a425a426808ff3                0
+ 3a425a426808ff3 dgram       0      0                0  3a425a426808f2b  3a425a426808f2b                0
+ 3a425a426809ae3 dgram       0      0                0  3a425a426809bab                0                0
+ 3a425a426809bab dgram       0      0  3a425a4267c801b                0  3a425a4299e7373                0 /private//var/run/syslog
+Registered kernel control modules
+id       flags    pcbcount rcvbuf   sndbuf   name 
+       1        9        0   131072   131072 com.apple.flow-divert 
+       2        1        0    16384     2048 com.apple.nke.sockwall 
+       3        9        0   524288   524288 com.apple.content-filter 
+       4        1       12    65536    65536 com.apple.net.netagent 
+       5        9        2   524288   524288 com.apple.net.utun_control 
+       6        1        0    65536    65536 com.apple.net.ipsec_control 
+       7        0       19     8192     2048 com.apple.netsrc 
+       8       18        3     8192     2048 com.apple.network.statistics 
+       9        5        0     8192    32768 com.apple.network.tcp_ccdebug 
+       a        1        0     8192     2048 com.apple.network.advisory 
+       b        4        0    65536     2048 com.apple.uart.URT1 
+       c        4        0     8192     2048 com.apple.uart.sk.URT1 
+       d        4        0    65536     2048 com.apple.uart.BLTH 
+       e        4        0     8192     2048 com.apple.uart.sk.BLTH 
+       f        0        0     8192     8192 com.apple.fileutil.kext.stateful.ctl 
+      10        0        0     8192     2048 com.apple.fileutil.kext.stateless.ctl 
+Active kernel event sockets
+Proto Recv-Q Send-Q vendor  class subcla
+kevt       0      0      1      1      2
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      1     11
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      1      6
+kevt       0      0      1      1      1
+kevt       0      0      1      6      1
+kevt       0      0      1      1      2
+kevt       0      0      1      6      1
+kevt       0      0      1      1      7
+kevt       0      0      1      1      1
+kevt       0      0      1      3      3
+kevt       0      0      1      1      2
+kevt       0      0      1      1      0
+Active kernel control sockets
+Proto Recv-Q Send-Q   unit     id name
+kctl       0      0      1      4 com.apple.net.netagent
+kctl       0      0      2      4 com.apple.net.netagent
+kctl       0      0      3      4 com.apple.net.netagent
+kctl       0      0      4      4 com.apple.net.netagent
+kctl       0      0      5      4 com.apple.net.netagent
+kctl       0      0      6      4 com.apple.net.netagent
+kctl       0      0      7      4 com.apple.net.netagent
+kctl       0      0      8      4 com.apple.net.netagent
+kctl       0      0      9      4 com.apple.net.netagent
+kctl       0      0     10      4 com.apple.net.netagent
+kctl       0      0     11      4 com.apple.net.netagent
+kctl       0      0     12      4 com.apple.net.netagent
+kctl       0      0      1      5 com.apple.net.utun_control
+kctl       0      0      2      5 com.apple.net.utun_control
+kctl       0      0      1      7 com.apple.netsrc
+kctl       0      0      2      7 com.apple.netsrc
+kctl       0      0      3      7 com.apple.netsrc
+kctl       0      0      4      7 com.apple.netsrc
+kctl       0      0      5      7 com.apple.netsrc
+kctl       0      0      6      7 com.apple.netsrc
+kctl       0      0      7      7 com.apple.netsrc
+kctl       0      0      8      7 com.apple.netsrc
+kctl       0      0      9      7 com.apple.netsrc
+kctl       0      0     10      7 com.apple.netsrc
+kctl       0      0     11      7 com.apple.netsrc
+kctl       0      0     12      7 com.apple.netsrc
+kctl       0      0     13      7 com.apple.netsrc
+kctl       0      0     14      7 com.apple.netsrc
+kctl       0      0     15      7 com.apple.netsrc
+kctl       0      0     16      7 com.apple.netsrc
+kctl       0      0     17      7 com.apple.netsrc
+kctl       0      0     18      7 com.apple.netsrc
+kctl       0      0     19      7 com.apple.netsrc
+kctl       0      0      1      8 com.apple.network.statistics
+kctl       0      0      2      8 com.apple.network.statistics
+kctl       0      0      3      8 com.apple.network.statistics
