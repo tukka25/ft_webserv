@@ -71,6 +71,7 @@ int main(int ac, char **av)
 		// free send_to
 		if (send_to)
 			free(send_to);
+		printf("hello");
 	}
 		close(new_socket);
 	printf("fd value = %d", server_fd);
