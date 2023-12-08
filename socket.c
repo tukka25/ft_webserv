@@ -67,6 +67,10 @@ int main(int ac, char **av)
 		send_to = "HTTP/1.1 200 OK\nContent-Type: text/plain\nContent-Length: 12\n\nHello world!";
 		// printf("%s\n", send_to);
 		write (new_socket, send_to, strlen(send_to));
+		
+		// free send_to
+		if (send_to)
+			free(send_to);
 	}
 		close(new_socket);
 	printf("fd value = %d", server_fd);
