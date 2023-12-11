@@ -60,11 +60,11 @@ int main(int ac, char **av)
 			return (1);
 		}
 		printf("%s\n", msg);
-		free(msg);
+		// free(msg);
 		char *send_to = malloc(10000);
 		if (!send_to)
 			return (0);
-		send_to = "HTTP/1.1 200 OK\nContent-Type: text/plain\nContent-Length: 12\n\nHello world!";
+		send_to = "HTTP/1.1 200 OK\nContent-Type:text/html\nContent-Length: 180\n\n\n<h1 >testing</h1>\n\n<h1 style=""color:Tomato;"">Hello World</h1>\n<p style=""color:DodgerBlue;"">Lorem ipsum...</p>\n<p style=""color:MediumSeaGreen;"">Ut wisi enim...</p>\n";
 		// printf("%s\n", send_to);
 		write (new_socket, send_to, strlen(send_to));
 		
@@ -76,3 +76,5 @@ int main(int ac, char **av)
 		close(new_socket);
 	printf("fd value = %d", server_fd);
 }
+
+// <h1 style="color:Tomato;">Hello World</h1>\n<p style="color:DodgerBlue;">Lorem ipsum...</p>\n<p style="color:MediumSeaGreen;">Ut wisi enim...</p>
