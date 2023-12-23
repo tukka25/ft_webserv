@@ -17,7 +17,7 @@ int main(int ac, char **av)
         memset(&address, 0, sizeof(address));
         address.sin_family = AF_INET;
         address.sin_addr.s_addr = htonl(INADDR_ANY); 
-        address.sin_port = htons(40001);
+        address.sin_port = htons(std::atoi(av[1]));
         if (bind(socket_fd,  (sockaddr *)&address, sizeof(address)) < 0)
         {
             std::cout << "Can't Bind The Socket" << std::endl;
@@ -78,7 +78,9 @@ int main(int ac, char **av)
             std::cout << "file u = " << file << std::endl;
             send_to += "HTTP/1.1 200 OK\r\n";
             type = "text/html";
-            if (file.substr(file.length() - 4) == ".css")
+            if (file == "/")
+                file = "index.html";
+            else if (file.substr(file.length() - 4) == ".css")
             {
                 type = "text/css";
             }
@@ -138,8 +140,6 @@ int main(int ac, char **av)
             {
                 type = "image/webp";
             }
-            if (file == "/")
-                file = "index.html";
             else
                 file = file.substr(1, file.length() - 1);
             std::cout << "file = "  << file << std::endl;
