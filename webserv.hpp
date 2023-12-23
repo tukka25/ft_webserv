@@ -32,6 +32,7 @@
 #include <sys/types.h>
 #include <netinet/in.h>
 #include <sys/socket.h>
+#include <map>
 
 struct sockaddr_in address;
 fd_set	fr, fw, fe;

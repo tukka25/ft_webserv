@@ -1,8 +1,9 @@
+#include "requestParser.hpp"
 # include "webserv.hpp"
-
 
 int main(int ac, char **av)
 {
+    // RequestParser   s
     // struct sockaddr_in address;
     (void)av;
     if (ac == 2)
@@ -46,6 +47,8 @@ int main(int ac, char **av)
             // if (!msg)
             //     return (0);
             int read_bytes = recv(new_socket, msg, sizeof(msg), 0);
+            RequestParser   parser(msg);
+            exit(0);
             if (read_bytes < 0)
             {
                 printf("nothing to print");
