@@ -5,6 +5,7 @@
 #include <string>
 #include <map>
 #include <iostream>
+#include <vector>
 
 
 // enum requestMethod
@@ -20,6 +21,8 @@ class RequestParser
 	public:
 		RequestParser(const std::string &content);
 		void	requestTokenizer(const std::string &requestString);
+		void	validateRequesLine(const std::string &requestLine);
+		void	loadRequestContent(const std::vector<std::string> &requestVec);
 		~RequestParser();
 };
 
