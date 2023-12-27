@@ -1,0 +1,12 @@
+{
+	-H: Used to set headers.
+	-X: Used to set the request method.
+	-d: Used to send data in the request body (for POST requests).
+}
+
+curl localhost:4331 -X DELETE
+curl localhost:4332 -X POSTT
+curl localhost:4331 -X POST
+curl localhost:4331 -X GET
+
+malformed Get => " 400 (Bad Request) error or a 301 (Moved Permanently) redirect"
