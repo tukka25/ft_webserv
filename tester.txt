@@ -8,3 +8,5 @@ curl localhost:4331 -X DELETE
 curl localhost:4332 -X POSTT
 curl localhost:4331 -X POST
 curl localhost:4331 -X GET
+
+malformed Get => " 400 (Bad Request) error or a 301 (Moved Permanently) redirect"

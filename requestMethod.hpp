@@ -6,11 +6,11 @@
 #include <string>
 
 
-// class RequestMethod
-// {
-// 	private:
+class RequestMethod
+{
+	private:
 
-// };
+};
 
 
 #endif
