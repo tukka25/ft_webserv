@@ -43,9 +43,11 @@ void RequestParser::requestTokenizer(const std::string &requestString)
 	std::map<std::string, std::string>::iterator	t = requestContent.begin();
 	for (;t != requestContent.end(); t++)
 		std::cout << "{" << t->first << "}" << "==>" << t->second << std::endl;
-	std::cout << "Method ==> " << getRequestMethod() << std::endl;
-	std::cout << "Path   ==> " << getRequestPath() << std::endl;
-	std::cout << "Host   ==> " << getHost() << std::endl;
+	std::cout << "Method  ==> " << getRequestMethod() << std::endl;
+	std::cout << "Path    ==> " << geturi() << std::endl;
+	std::cout << "Host    ==> " << getHost() << std::endl;
+	std::cout << "Version ==> " << getVersion() << std::endl;
+	std::cout << "Accept  ==> " << getFromRequest("Acept") << std::endl;
 }
 
 void	RequestParser::validateRequesLine(const std::string &requestLine)
@@ -67,7 +69,9 @@ void	RequestParser::validateRequesLine(const std::string &requestLine)
 		if (i == 0)
 			this->setRequestMethod(token);
 		if (i == 1)
-			this->setRequestPath(token);
+			this->seturi(token);
+		if (i == 2)
+			this->setVersion(token);
 		i++;
 	}
 }
@@ -91,6 +95,7 @@ void	RequestParser::loadRequestContent(const std::vector<std::string> &requestVe
 		throw (std::runtime_error("Bad Request")); // 400 bad request
 	this->setHost((this->requestContent.find("Host"))->second);
 }
+
 
 std::vector<std::string> RequestParser::splitByString(const std::string &str, const char *del)
 {
@@ -130,14 +135,34 @@ void	RequestParser::setHost(const std::string &hostName)
 	this->host = hostName;
 }
 
+const std::string	&RequestParser::getFromRequest(const std::string &key) const
+{
+	static std::string	s = "";
+	if (this->requestContent.find(key) != this->requestContent.end())
+		return (this->requestContent.find(key)->second);
+	else
+		return (s);
+}
+
+
+void	RequestParser::setVersion(const std::string &str)
+{
+	this->version = str;
+}
+
+const std::string &RequestParser::getVersion() const
+{
+	return (this->version);
+}
+
 const std::string	&RequestParser::getHost() const
 {
 	return (this->host);
 }
 
-void	RequestParser::setRequestPath(const std::string &str)
+void	RequestParser::seturi(const std::string &str)
 {
-	this->requestPath = str;
+	this->uri = str;
 }
 
 void	RequestParser::setRequestMethod(const std::string &str)
@@ -150,9 +175,9 @@ const std::string	&RequestParser::getRequestMethod() const
 	return (this->requestMethod);
 }
 
-const std::string	&RequestParser::getRequestPath() const
+const std::string	&RequestParser::geturi() const
 {
-	return (this->requestPath);
+	return (this->uri);
 }
 
 const std::map<std::string, std::string> &RequestParser::getRequestContent() const
