@@ -29,8 +29,8 @@ class RequestParser
 	public:
 		RequestParser(const std::string &content);
 		void				validateUri(const std::string &str);
-		void				validateHost(const std::string &hostName);
-		void				validateValue(const std::string &hostName);
+		void				validateHost(std::string &hostName);
+		void				validateValue(std::string &hostName);
 		bool				checkVersionNumber(const std::string &str);
 		void				validateVersion(const std::string &version);
 		void				requestTokenizer(const std::string &requestString);
