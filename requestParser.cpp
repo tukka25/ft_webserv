@@ -1,4 +1,5 @@
 #include "requestParser.hpp"
+#include <cctype>
 #include <cstddef>
 #include <cstring>
 #include <ostream>
@@ -7,6 +8,7 @@
 #include <string>
 #include <utility>
 #include <vector>
+#include <algorithm>
 
 RequestParser::RequestParser(const std::string &requestParser)
 {
@@ -21,10 +23,11 @@ void RequestParser::requestTokenizer(const std::string &requestString)
 	std::string			line;
 	std::string			tmp = requestString;
 	std::vector<std::string>	requestVec;
-	std::cout << requestString << std::endl;
+	// std::cout << requestString << std::endl;
 	for (size_t i = 0; i < tmp.length(); i++)
 	{
 		line = tmp.substr(0, tmp.find("\r\n"));
+		std::cout << "line = " << "{" << line << "}" << std::endl;
 		if (line.empty())
 			throw (std::runtime_error("Get Error"));
 		requestVec.push_back(line);
@@ -37,17 +40,18 @@ void RequestParser::requestTokenizer(const std::string &requestString)
 	std::vector<std::string>::iterator	it = requestVec.begin();
 	for (;it != requestVec.end(); it++)
 		std::cout << "{" << *it << "}" << std::endl;
+	std::cout << "request line = " << requestVec[0] << std::endl;
 	validateRequesLine(requestVec[0]);
 	loadRequestContent(requestVec);
-	std::cout << std::endl << std::endl;
-	std::map<std::string, std::string>::iterator	t = requestContent.begin();
-	for (;t != requestContent.end(); t++)
-		std::cout << "{" << t->first << "}" << "==>" << t->second << std::endl;
-	std::cout << "Method  ==> " << getRequestMethod() << std::endl;
-	std::cout << "Path    ==> " << geturi() << std::endl;
-	std::cout << "Host    ==> " << getHost() << std::endl;
-	std::cout << "Version ==> " << getVersion() << std::endl;
-	std::cout << "Accept  ==> " << getFromRequest("Acept") << std::endl;
+	// std::cout << std::endl << std::endl;
+	// std::map<std::string, std::string>::iterator	t = requestContent.begin();
+	// for (;t != requestContent.end(); t++)
+	// 	std::cout << "{" << t->first << "}" << "==>" << t->second << std::endl;
+	// std::cout << "Method  ==> " << getRequestMethod() << std::endl;
+	// std::cout << "Path    ==> " << geturi() << std::endl;
+	// std::cout << "Host    ==> " << getHost() << std::endl;
+	// std::cout << "Version ==> " << getVersion() << std::endl;
+	// std::cout << "Accept  ==> " << getFromRequest("Acept") << std::endl;
 }
 
 void	RequestParser::validateRequesLine(const std::string &requestLine)
@@ -66,36 +70,109 @@ void	RequestParser::validateRequesLine(const std::string &requestLine)
 	{
 		if (i == 0 && std::find(possibleMethods.begin(), possibleMethods.end(), token) == possibleMethods.end())
 			throw (std::runtime_error(token + " Is Unkown Method")); //400 bad request
-		if (i == 0)
+		if (i == 0 && !token.empty())
 			this->setRequestMethod(token);
-		if (i == 1)
+		if (i == 1 && !token.empty())
+		{
+			this->validateUri(token);
 			this->seturi(token);
-		if (i == 2)
+		}
+		if (i == 2 && !token.empty())
+		{
+			this->validateVersion(token);
 			this->setVersion(token);
-		i++;
+		}
+		if (!token.empty())
+			i++;
 	}
+	if (i != 3)
+		throw (std::runtime_error("400 Bad Request"));
+}
+
+void	RequestParser::validateUri(const std::string &str)
+{
+	if (str.empty() || str.find("/") == std::string::npos)
+		throw (std::runtime_error("400 Bad Request"));
 }
 
 void	RequestParser::loadRequestContent(const std::vector<std::string> &requestVec)
 {
 	std::stringstream			ss;
 	std::vector<std::string>	splitedTokens;
+	std::string					token;
+	std::string					value;
 
 	if (requestVec.empty())
 		throw (std::runtime_error("Invalid Get Contents"));
+	// ss << r
 	std::vector<std::string>::const_iterator	it = requestVec.begin() + 1;
 	for (; it != requestVec.end(); it++)
 	{
-		splitedTokens = splitByString(*it, ": ");
-		if (splitedTokens.size() < 2)
-			throw (std::runtime_error("Bad Request"));
-		this->requestContent.insert(std::pair<std::string, std::string>(splitedTokens[0], splitedTokens[1]));
+		ss << *it;
+		std::getline(ss, token, ':');
+		std::cout << "token n = " << token << std::endl;
+		if (token  == "Host")
+			validateHost(*it);
+		// validateValue(*it);
+		// splitedTokens = splitByString(*it, ": ");
+		// if (splitedTokens.size() < 2)
+		// 	throw (std::runtime_error("Bad Request"));
+		this->requestContent.insert(std::pair<std::string, std::string>(token, *it));
 	}
 	if (this->requestContent.find("Host") == this->requestContent.end())
 		throw (std::runtime_error("Bad Request")); // 400 bad request
 	this->setHost((this->requestContent.find("Host"))->second);
 }
 
+void			RequestParser::validateHost(const std::string &hostName)
+{
+	std::string		value;
+	std::string		tmp;
+
+	tmp = hostName;
+	if (hostName.empty())
+		return;
+	value = tmp.substr(tmp.find(':') + 1, tmp.length());
+	if (value.empty())
+		throw (std::runtime_error("400 Bad Request"));
+	for (int i = 0; i < value.length() && std::isspace(value[i]); i++)
+		value = value.substr(value.find(' ') + 1, value.length());
+	// value.erase(std::remove_if(value.begin(), value.end(), std::isspace), value.end());
+	std::cout << "val = " << value << std::endl;
+}
+
+
+bool	RequestParser::checkVersionNumber(const std::string &str)
+{
+	if (str.length() == 3 && std::isdigit(str[0]) && str[1] == '.' && std::isdigit(str[2]))
+		return true;
+	return false;
+}
+
+void	RequestParser::validateVersion(const std::string &version)
+{
+	if (version.empty() || version.find("/") == std::string::npos || version.find(".") == std::string::npos)
+		throw (std::runtime_error("400 Bad Request"));
+	if (std::count(version.begin(), version.end(), '.') != 1)
+		throw (std::runtime_error("400 Bad Request"));
+	std::stringstream	ss(version);
+	std::string			token;
+	int					i = 0;
+	while (std::getline(ss, token, '/'))
+	{
+			std::cout << "jgjhg = " << token << std::endl;
+		if (i == 0 && token != "HTTP")
+			throw (std::runtime_error("400 Bad Request"));
+		if (i == 1)
+		{
+			// std::cout << "jg2jhg = " << token.substr(version.find("/"), token.length()) << std::endl;
+			if (!this->checkVersionNumber(token))
+				throw (std::runtime_error("400 Bad Request"));
+		}
+		i++;
+
+	}
+}
 
 std::vector<std::string> RequestParser::splitByString(const std::string &str, const char *del)
 {

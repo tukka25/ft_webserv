@@ -28,6 +28,11 @@ class RequestParser
 		void				setRequestMethod(const std::string &str);
 	public:
 		RequestParser(const std::string &content);
+		void				validateUri(const std::string &str);
+		void				validateHost(const std::string &hostName);
+		void				validateValue(const std::string &hostName);
+		bool				checkVersionNumber(const std::string &str);
+		void				validateVersion(const std::string &version);
 		void				requestTokenizer(const std::string &requestString);
 		void				validateRequesLine(const std::string &requestLine);
 		void				setHost(const std::string &hostName);
