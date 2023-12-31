@@ -27,31 +27,34 @@ void RequestParser::requestTokenizer(const std::string &requestString)
 	for (size_t i = 0; i < tmp.length(); i++)
 	{
 		line = tmp.substr(0, tmp.find("\r\n"));
-		std::cout << "line = " << "{" << line << "}" << std::endl;
+		if (tmp.find("\r\n") == std::string::npos)
+		{
+			requestVec.push_back(line);
+			break ;
+		}
+		// std::cout << "line = " << "{" << line << "}" << std::endl;
 		if (line.empty())
 			throw (std::runtime_error("Get Error"));
 		requestVec.push_back(line);
 		tmp = tmp.substr(tmp.find("\r\n") + 2, tmp.length());
-		// tmp =  tmp.substr(2, tmp.length());
 		if (tmp.empty() || tmp == "\r\n")
 			break ;
 
 	}
-	std::vector<std::string>::iterator	it = requestVec.begin();
-	for (;it != requestVec.end(); it++)
-		std::cout << "{" << *it << "}" << std::endl;
-	std::cout << "request line = " << requestVec[0] << std::endl;
+	// for (;it != requestVec.end(); it++)
+		// std::cout << "{" << *it << "}" << std::endl;
+	// std::cout << "request line = " << requestVec[0] << std::endl;
 	validateRequesLine(requestVec[0]);
 	loadRequestContent(requestVec);
-	std::cout << std::endl << std::endl;
-	std::map<std::string, std::string>::iterator	t = requestContent.begin();
-	for (;t != requestContent.end(); t++)
-		std::cout << "{" << t->first << "}" << "==>" << t->second << std::endl;
-	std::cout << "Method  ==> " << getRequestMethod() << std::endl;
-	std::cout << "Path    ==> " << geturi() << std::endl;
-	std::cout << "Host    ==> " << getHost() << std::endl;
-	std::cout << "Version ==> " << getVersion() << std::endl;
-	std::cout << "Accept  ==> " << getFromRequest("Acept") << std::endl;
+	// std::cout << std::endl << std::endl;
+	// std::map<std::string, std::string>::iterator	t = requestContent.begin();
+	// for (;t != requestContent.end(); t++)
+	// 	std::cout << "{" << t->first << "}" << "==>" << t->second << std::endl;
+	// std::cout << "Method  ==> " << getRequestMethod() << std::endl;
+	// std::cout << "Path    ==> " << geturi() << std::endl;
+	// std::cout << "Host    ==> " << getHost() << std::endl;
+	// std::cout << "Version ==> " << getVersion() << std::endl;
+	// std::cout << "Accept  ==> " << getFromRequest("Acept") << std::endl;
 }
 
 void	RequestParser::validateRequesLine(const std::string &requestLine)
@@ -95,34 +98,45 @@ void	RequestParser::validateUri(const std::string &str)
 		throw (std::runtime_error("400 Bad Request"));
 }
 
+void	RequestParser::checkArgsNumber(const std::string &arg)
+{
+	std::string		content;
+
+	if (arg.empty())
+		return;
+	content = arg;
+}
+
 void	RequestParser::loadRequestContent(const std::vector<std::string> &requestVec)
 {
 	std::stringstream			ss;
 	std::vector<std::string>	splitedTokens;
 	std::string					token;
 	std::string					value;
+	std::string					lowerString;
 
 	if (requestVec.empty())
 		throw (std::runtime_error("Invalid Get Contents"));
-	// ss << r
 	std::vector<std::string>::const_iterator	it = requestVec.begin() + 1;
 	for (; it != requestVec.end(); it++)
 	{
-		ss << *it;
-		std::getline(ss, token, ':');
-		std::cout << "token n = " << token << std::endl;
+		std::stringstream			ss(*it);
 		value = *it;
-		if (token  == "Host")
+		token = *it;
+		// std::cout << "bef = " << token << std::endl;
+		if ((*it).find(':') == std::string::npos && (*it).find(' ') != std::string::npos)
+			throw (std::runtime_error("400 Bad Request"));
+		std::getline(ss, token, ':');
+		lowerString.resize(token.size());
+		std::transform(token.begin(), token.end(), lowerString.begin(), ::tolower);
+		if (lowerString  == "host")
 			validateHost(value);
 		else
 			validateValue(value);
-		// splitedTokens = splitByString(*it, ": ");
-		// if (splitedTokens.size() < 2)
-		// 	throw (std::runtime_error("Bad Request"));
 		this->requestContent.insert(std::pair<std::string, std::string>(token, value));
 	}
 	if (this->requestContent.find("Host") == this->requestContent.end())
-		throw (std::runtime_error("Bad Request")); // 400 bad request
+		throw (std::runtime_error("400 Bad Request")); // 400 bad request
 	this->setHost((this->requestContent.find("Host"))->second);
 }
 
@@ -133,8 +147,10 @@ void			RequestParser::validateHost(std::string &hostName)
 	std::stringstream	ss;
 	std::string	token;
 	std::vector<std::string>			tokens;
-	int					i = 0;
+	static int i;
 
+	if (i > 0)
+		throw (std::runtime_error("400 Bad Request"));
 	tmp = hostName;
 	if (hostName.empty())
 	{
@@ -153,6 +169,7 @@ void			RequestParser::validateHost(std::string &hostName)
 	if (tokens.size() != 1)
 		throw (std::runtime_error("400 Bad Request"));
 	hostName = tokens[0];
+	i++;
 }
 
 void	RequestParser::validateValue(std::string &hostName)
@@ -168,9 +185,10 @@ void	RequestParser::validateValue(std::string &hostName)
 		return;
 	}
 	value = tmp.substr(tmp.find(':') + 1, tmp.length());
-	if (value.empty())
+	if (value.empty() || value == hostName)
 		hostName = "";
-	hostName = value;
+	else
+		hostName = value;
 }
 
 bool	RequestParser::checkVersionNumber(const std::string &str)
@@ -191,12 +209,10 @@ void	RequestParser::validateVersion(const std::string &version)
 	int					i = 0;
 	while (std::getline(ss, token, '/'))
 	{
-			std::cout << "jgjhg = " << token << std::endl;
 		if (i == 0 && token != "HTTP")
 			throw (std::runtime_error("400 Bad Request"));
 		if (i == 1)
 		{
-			// std::cout << "jg2jhg = " << token.substr(version.find("/"), token.length()) << std::endl;
 			if (!this->checkVersionNumber(token))
 				throw (std::runtime_error("400 Bad Request"));
 		}
