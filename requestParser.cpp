@@ -212,6 +212,8 @@ bool	RequestParser::checkVersionNumber(const std::string &str)
 	if (str.length() == 3 && std::isdigit(str[0]) && str[1] == '.' && std::isdigit(str[2]))
 	{
 		float version = std::stof(str);
+		if (version < 1)
+			return false;
 		if (version >= 1 && version <= 1.9)
 			return true;
 		else

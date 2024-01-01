@@ -10,7 +10,7 @@ int main(int ac, char **av)
     (void)ac;
     try
     {
-        RequestParser   parser("GET / HTTP/2.1\r\nhost: dfff:55\r\ndsfdsfs\r\n\r\n");
+        RequestParser   parser("GET / HTTP/1.1\r\nhost: dfff:55\r\ndsfdsfs\r\n\r\n");
         std::cout << "Success" << std::endl;
     }
     catch (std::exception &e)
