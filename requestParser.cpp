@@ -41,8 +41,9 @@ void RequestParser::requestTokenizer(const std::string &requestString)
 			break ;
 
 	}
+	// std::vector<std::string>::iterator it = requestVec.begin();
 	// for (;it != requestVec.end(); it++)
-		// std::cout << "{" << *it << "}" << std::endl;
+	// 	std::cout << "{" << *it << "}" << std::endl;
 	// std::cout << "request line = " << requestVec[0] << std::endl;
 	validateRequesLine(requestVec[0]);
 	loadRequestContent(requestVec);
@@ -107,6 +108,21 @@ void	RequestParser::checkArgsNumber(const std::string &arg)
 	content = arg;
 }
 
+void	RequestParser::searchForHost()
+{
+	std::map<std::string, std::string>::iterator mapIt = this->requestContent.begin();
+	std::string	lowerKey;
+
+	for (;mapIt != this->requestContent.end(); mapIt++)
+	{
+		lowerKey.resize(mapIt->first.size());
+		std::transform(mapIt->first.begin(), mapIt->first.end(), lowerKey.begin(), ::tolower);
+		if (lowerKey == "host")
+			return ;
+	}
+	throw (std::runtime_error("400 bad Request"));
+}
+
 void	RequestParser::loadRequestContent(const std::vector<std::string> &requestVec)
 {
 	std::stringstream			ss;
@@ -123,9 +139,6 @@ void	RequestParser::loadRequestContent(const std::vector<std::string> &requestVe
 		std::stringstream			ss(*it);
 		value = *it;
 		token = *it;
-		// std::cout << "bef = " << token << std::endl;
-		if ((*it).find(':') == std::string::npos && (*it).find(' ') != std::string::npos)
-			throw (std::runtime_error("400 Bad Request"));
 		std::getline(ss, token, ':');
 		lowerString.resize(token.size());
 		std::transform(token.begin(), token.end(), lowerString.begin(), ::tolower);
@@ -135,8 +148,7 @@ void	RequestParser::loadRequestContent(const std::vector<std::string> &requestVe
 			validateValue(value);
 		this->requestContent.insert(std::pair<std::string, std::string>(token, value));
 	}
-	if (this->requestContent.find("Host") == this->requestContent.end())
-		throw (std::runtime_error("400 Bad Request")); // 400 bad request
+	this->searchForHost();
 	this->setHost((this->requestContent.find("Host"))->second);
 }
 
@@ -168,6 +180,8 @@ void			RequestParser::validateHost(std::string &hostName)
 	}
 	if (tokens.size() != 1)
 		throw (std::runtime_error("400 Bad Request"));
+	if (tokens[0][0] == ':')
+		throw (std::runtime_error("400 Bad Request"));
 	hostName = tokens[0];
 	i++;
 }
@@ -184,6 +198,8 @@ void	RequestParser::validateValue(std::string &hostName)
 		hostName = "";
 		return;
 	}
+	if (tmp.find(':') == std::string::npos && tmp.find(' ') != std::string::npos)
+		throw (std::runtime_error("400 Bad Request"));
 	value = tmp.substr(tmp.find(':') + 1, tmp.length());
 	if (value.empty() || value == hostName)
 		hostName = "";
@@ -194,7 +210,13 @@ void	RequestParser::validateValue(std::string &hostName)
 bool	RequestParser::checkVersionNumber(const std::string &str)
 {
 	if (str.length() == 3 && std::isdigit(str[0]) && str[1] == '.' && std::isdigit(str[2]))
-		return true;
+	{
+		float version = std::stof(str);
+		if (version >= 1 && version <= 1.9)
+			return true;
+		else
+			throw (std::runtime_error("505 HTTP Version Not Supported"));
+	}
 	return false;
 }
 

@@ -32,6 +32,7 @@ class RequestParser
 		void				validateHost(std::string &hostName);
 		void				validateValue(std::string &hostName);
 		void				checkArgsNumber(const std::string &arg);
+		void				searchForHost();
 		bool				checkVersionNumber(const std::string &str);
 		void				validateVersion(const std::string &version);
 		void				requestTokenizer(const std::string &requestString);
